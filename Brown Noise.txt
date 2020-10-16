@@ -1,0 +1,19 @@
+pet.moveXY(32, 28);
+hero.moveXY(10, 19);
+// Distract the skeleton.
+pet.distractionNoise();
+// Sneak while the skeleton is distracted.
+hero.moveXY(10, 46);
+
+// Repeat this maneuver to get the treasure:
+pet.moveXY(64, 29);
+hero.moveXY(46, 34);
+pet.distractionNoise();
+hero.moveXY(46, 10);
+
+hero.moveXY(65, 9);
+pet.distractionNoise();
+hero.moveXY(70, 9);
+hero.moveXY(46, 21);
+pet.distractionNoise();
+hero.moveXY(40, 56);

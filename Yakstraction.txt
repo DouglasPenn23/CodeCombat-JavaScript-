@@ -1,0 +1,19 @@
+while(true) { 
+    var enemy = hero.findNearestEnemy();
+    var blackFlag = hero.findFlag("black");
+    var greenFlag = hero.findFlag("green");
+    var coin = hero.findNearestItem();
+    
+    if(blackFlag) {
+        hero.moveXY(blackFlag.pos.x, blackFlag.pos.y);
+        hero.pickUpFlag(blackFlag);
+    }
+    if(greenFlag) {
+        hero.moveXY(greenFlag.pos.x, greenFlag.pos.y);
+        hero.buildXY("decoy", greenFlag.pos.x, greenFlag.pos.y);
+        hero.pickUpFlag(greenFlag);
+    }
+    if(enemy) {
+         hero.buildXY("decoy", hero.pos.x, hero.pos.y);
+    }
+}

@@ -1,0 +1,13 @@
+while(hero.gold < 25) {
+    var coin = hero.findNearestItem();
+    hero.moveXY(coin.pos.x, coin.pos.y);
+}
+    
+// After the while loop, build a "decoy" at the white X.
+hero.buildXY("decoy", 72, 68);
+// While your health equals maxHealth, say insults
+while (hero.health >= hero.maxHealth) {
+    hero.say("fudge your mudda");
+}
+// Then move back to the red X.
+hero.moveXY(22, 15);

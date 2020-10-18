@@ -1,0 +1,12 @@
+while (true) {
+    // Get an array of enemies.
+    var enemies = hero.findEnemies();
+    // If the array is not empty.
+    if (enemies.length > 0) {
+        // Attack the first enemy from "enemies" array.
+        var enemy1 = enemies[0];
+        hero.attack(enemy1);
+        // Return to the start position.
+        hero.moveXY(40, 20);
+    }
+}

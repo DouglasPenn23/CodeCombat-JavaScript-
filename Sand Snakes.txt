@@ -1,0 +1,24 @@
+while(true) {
+    var coins = hero.findItems();
+    var coinIndex = 0;
+    var nearest = null;
+    var nearestDistance = 9999;
+    
+    // Loop through all the coins to find the nearest one.
+    while(coinIndex < coins.length) {
+        var coin = coins[coinIndex];
+        coinIndex++;
+        var distance = hero.distanceTo(coin);
+        // If this coin's distance is less than the nearestDistance
+        if(distance < nearestDistance) {
+            // Set nearest to coin
+            nearest = coin;
+            // Set nearestDistance to distance
+            nearestDistance = distance;
+        }
+    }
+    // If there's a nearest coin, move to its position. You'll need moveXY so you don't cut corners and hit a trap.
+    if(nearest) {
+        hero.moveXY(nearest.pos.x, nearest.pos.y);
+    }
+}

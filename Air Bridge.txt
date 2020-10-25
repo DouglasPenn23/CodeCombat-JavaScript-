@@ -1,0 +1,28 @@
+function onSpawn(e) {
+    // We need to save three peasants.
+    var remainingPeasants = 3;
+    while (remainingPeasants > 0) {
+        // Take a good position.
+        pet.moveXY(40, 55);
+        var peasant = pet.findNearestByType("peasant");
+        if (peasant) {
+            // Carry the peasant to the center passage.
+            pet.carryUnit(peasant, 40, 34);
+            remainingPeasants -= 1;
+        }
+    }
+    var munchkin = pet.findNearestByType("munchkin");
+    // Carry a munchkin to the fire traps:
+    pet.carryUnit(munchkin, 39, 22);
+}
+
+pet.on("spawn", onSpawn);
+
+// Fight!
+while(true) {
+var enemy = hero.findNearestEnemy();
+var distanceTo = hero.distanceTo(enemy);
+    if(enemy && distanceTo < 5) {
+        hero.attack(enemy);
+    }
+}

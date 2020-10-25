@@ -1,0 +1,37 @@
+function findMostHealth(enemies) {
+    var target = null;
+    var targetHealth = 0;
+    var enemyIndex = 0;
+    while(enemyIndex < enemies.length) {
+        var enemy = enemies[enemyIndex];
+        if(enemy.health > targetHealth) {
+            target = enemy;
+            targetHealth = enemy.health;
+        }
+        enemyIndex += 1;
+    }
+    return target;
+}
+
+function valueOverDistance(item) {
+    return item.value / hero.distanceTo(item);
+}
+
+// Return the item with the highest valueOverDistance(item)
+function findBestItem(items) {
+    var bestItem = null;
+    var bestValue = 0;
+    var itemsIndex = 0;
+    
+    // Loop over the items array.
+    // Find the item with the highest valueOverDistance()
+    while(itemsIndex < items.length) {
+        var item = items[itemsIndex];
+            if(valueOverDistance(item) > bestValue) {
+                bestItem = item;
+                bestValue = valueOverDistance(item);
+            }
+            itemsIndex++;
+    }
+    return bestItem;
+}

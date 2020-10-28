@@ -1,0 +1,21 @@
+var player = game.spawnPlayerXY("samurai", 20, 20);
+
+game.addSurviveGoal(20);
+
+var spawner = game.spawnXY("generator", 50, 50);
+spawner.maxHealth = 9001;
+spawner.spawnType = "munchkin";
+// Add more spawners for more enemies on the field:
+var spawner2 = game.spawnXY("generator", 18, 52);
+spawner2.maxHealth = 100;
+spawner2.spawnType = "skeleton";
+
+// ui.track() displays an object's property for players to see!
+ui.track(game, "time");
+// Use ui.track to track game's "defeated" property:
+ui.track(game, "defeated");
+player.attackDamage = 100;
+// Increase the hero's maxSpeed:
+player.maxSpeed = 700;
+player.maxHealth = 90000;
+// Press play and defeat 6 munchkins or skeletons!

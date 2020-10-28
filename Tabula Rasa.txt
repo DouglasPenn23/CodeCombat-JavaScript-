@@ -1,0 +1,6 @@
+// Spawn a player with spawnPlayerXY(type, x, y)
+var player = game.spawnPlayerXY('captain', 9, 57);
+// Add at least one goal!
+game.addMoveGoalXY(15, 55);
+// Spawn objects into the game with spawnXY(type, x, y)
+game.spawnXY("forest", 26, 37);

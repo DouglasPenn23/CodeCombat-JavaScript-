@@ -1,0 +1,7 @@
+game.spawnPlayerXY("captain", 9, 18);
+// Add a goal to collect the gems using game.addCollectGoal()
+game.addCollectGoal(3);
+game.spawnXY("gem", 28, 28);
+// Spawn 3 gems across the level for the player to collect:
+game.spawnXY("gem", 26, 19);
+game.spawnXY("gem", 45, 14);

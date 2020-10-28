@@ -1,0 +1,10 @@
+game.addCollectGoal(1);
+
+// Spawn a hero and chest to collect.
+game.spawnPlayerXY("duelist", 9, 59);
+game.spawnXY("chest", 8, 14);
+
+game.spawnXY("forest", 26, 51);
+// Add 2 more "forest" objects. Make sure not to block the gems completely!
+game.spawnXY("forest", 73, 14);
+game.spawnXY("forest", 74, 15);

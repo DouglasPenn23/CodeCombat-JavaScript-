@@ -1,0 +1,13 @@
+
+var player = game.spawnPlayerXY("champion", 15, 35);
+player.attackDamage = 60;
+player.maxSpeed = 8;
+
+game.addSurviveGoal();
+game.addDefeatGoal(1);
+game.spawnXY("x-mark-stone", 60, 35);
+// Spawn a "generator"
+game.spawnXY("generator", 36, 30);
+// Spawn a "lightstone"
+game.spawnXY("lightstone", 36, 30);
+// Now beat your game!

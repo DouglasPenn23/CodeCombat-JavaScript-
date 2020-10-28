@@ -1,0 +1,6 @@
+game.spawnMaze("forest", 1);
+
+// Spawn a hero with spawnPlayerXY(type, x, y)
+var player = game.spawnPlayerXY('captain', 13, 59);
+// Add at least one goal!
+game.addMoveGoalXY(13, 44);

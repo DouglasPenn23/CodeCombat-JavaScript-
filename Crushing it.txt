@@ -1,0 +1,13 @@
+
+// Spawn a hero using game.spawnPlayerXY(type, x, y).
+game.spawnPlayerXY("knight", 13, 54);
+game.addSurviveGoal();
+// Add a goal to defeat ogres with game.addDefeatGoal()
+game.addDefeatGoal(4);
+
+
+game.spawnXY("munchkin", 40, 10);
+// Spawn at least 3 more munchkins.
+game.spawnXY("munchkin", 49, 19);
+game.spawnXY("munchkin", 57, 26);
+game.spawnXY("munchkin", 56, 15);

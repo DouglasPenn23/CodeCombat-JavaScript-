@@ -1,0 +1,13 @@
+hero.buildXY('fire-trap', 64, 44);
+hero.moveXY(73, 15);
+hero.moveXY(42, 11);
+hero.moveXY(46, 9);
+hero.wait(1);
+hero.moveXY(14, 37);
+var item = hero.findNearestItem();
+hero.jumpTo(Vector(17, 37));
+while (item) {
+    hero.move(item.pos);
+    item = hero.findNearestItem();
+    }
+hero.moveXY(73, 15);

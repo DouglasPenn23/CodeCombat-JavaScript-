@@ -1,0 +1,5 @@
+game.spawnPlayerXY("knight", 39, 23);
+
+// Use game.addCollectGoal(X) to allow the player to win
+// after collecting only X gems! (In this case, X should be 6)
+game.addCollectGoal(6);

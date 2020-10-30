@@ -1,0 +1,34 @@
+while(true) {
+    var blackFlag = hero.findFlag("black");
+    var greenFlag = hero.findFlag("green");
+        if(greenFlag) {
+            hero.move(greenFlag.pos);
+            hero.pickUpFlag(greenFlag);
+            hero.consecrate;
+        }
+        
+        while (blackFlag) {
+            var enemy = hero.findNearestEnemy();
+                    if(enemy) {
+                        hero.consecrate();
+            
+                    if(hero.canCast("chain-lightning") && enemy) {
+                        hero.cast("chain-lightning", enemy);
+                    }
+                        else if(hero.isReady("bash") && enemy) {
+                            hero.bash(enemy);
+                        }
+                            else if(hero.isReady("cleave") && enemy) {
+                                hero.cleave(enemy);
+                            }
+                            else if (enemy) {
+                                hero.attack(enemy);
+                            }
+                            else {
+                                hero.pickUpFlag(blackFlag);
+                            }
+            }
+        }
+}
+
+// Use Consecrate around your allies to keep them healed. 

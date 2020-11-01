@@ -1,0 +1,22 @@
+while(true) {
+    var coin = hero.findNearestItem();
+    hero.move(coin.pos);
+
+    
+    if (hero.gold > hero.costOf("soldier")) {
+        hero.summon("soldier");
+    }
+        
+    var enemy = hero.findNearest(hero.findEnemies());
+    if (enemy) {
+        var soldiers = hero.findFriends();
+        var soldierIndex = 0;
+        var soldier = soldiers[soldierIndex];
+    
+            while (soldierIndex < soldiers.length) {
+            var soldier = soldiers[soldierIndex];
+            hero.command(soldier, "attack", enemy);
+            soldierIndex +=1;
+            }
+    }
+}

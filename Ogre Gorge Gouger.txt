@@ -1,0 +1,14 @@
+while(hero.time < 20) {
+    // Collect coins
+    var item = hero.findNearestItem();
+    hero.move(item.pos);
+}
+
+while(hero.pos.x > 16) {
+    // Retreat behind the fence
+    hero.jumpTo({'x': 16, 'y': 37});
+    hero.moveXY(16, 37);
+}
+
+// Build a fence to keep the ogres out.
+hero.buildXY("fence", 20, 37);

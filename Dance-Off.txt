@@ -1,0 +1,7 @@
+var friend = hero.findNearest(hero.findFriends());
+var diffX = friend.pos.x - hero.pos.x;
+var diffY = friend.pos.y - hero.pos.y;
+while(true) {
+    var target = {'x': friend.pos.x - diffX, 'y': friend.pos.y - diffY};
+    hero.move(target);
+}
